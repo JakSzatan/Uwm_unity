@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,7 +23,7 @@ public class Move_kwadrat : MonoBehaviour
             speedY = speed;
             speed = 0;
         }
-        if (startY+10 <= transform.position.y && speedY>0)
+        if (startY + 10 <= transform.position.y && startX + 10 <= transform.position.x && speedY > 0)
         {
             speed = speedY;
             speedY = 0;
@@ -33,7 +33,8 @@ public class Move_kwadrat : MonoBehaviour
             speedY = speed;
             speed = 0;
         }
-        if (transform.position.x <= startX && startY <= transform.position.y && speed == 0) {
+        if (transform.position.x <= startX && transform.position.y <= startY && speed == 0)
+        {
             speed = speedY;
             speedY = 0;
             speed *= -1;
